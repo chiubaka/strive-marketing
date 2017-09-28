@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -23,7 +24,31 @@ module.exports = {
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
       // Compile all '.scss' files through 'sass-loader'.
-      { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: function() {
+                return [
+                  require("precss"),
+                  require("autoprefixer")
+                ]
+              }
+            }
+          },
+          {
+            loader: "sass-loader"
+          }
+        ]
+      },
       { test: /\.(woff|woff2)$/, loader: "url-loader?name=fonts/[hash].[ext]&limit=5000&mimetype=application/font-woff" },
       { test: /\.(eot|svg|ttf)$/, loader: "file-loader?name=fonts/[hash].[ext]" },
       { test: /\.(jpg|png|svg)$/, loader: "url-loader" } 
@@ -55,6 +80,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "src/index.html"
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      Popper: ["popper.js", "default"],
     })
   ]
 };
