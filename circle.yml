@@ -22,4 +22,4 @@ deployment:
   staging:
     branch: master
     commands:
-      - scp circleci@strive.do:/var/www/strive/ dist/*
+      - scp dist/* circleci@strive.do:/var/www/strive/
