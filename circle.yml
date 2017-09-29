@@ -1,4 +1,6 @@
 machine:
+  node:
+    version: 0.5.0
   hosts:
     strive.do: 138.68.233.83
 
