@@ -5,6 +5,8 @@ machine:
     version: 5.4.2
   hosts:
     strive.do: 138.68.233.83
+  environment:
+    CIRCLE_ARTIFACTS: dist/
 
 dependencies:
   override:

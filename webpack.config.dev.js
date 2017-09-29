@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.tsx",
   output: {
-    filename: "serenity.js",
+    filename: "strive.js",
     path: __dirname + "/dist",
     publicPath: "/"
   },
