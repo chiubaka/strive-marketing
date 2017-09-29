@@ -6,7 +6,7 @@ machine:
   hosts:
     strive.do: 138.68.233.83
   environment:
-    CIRCLE_ARTIFACTS: dist/
+    CIRCLE_ARTIFACTS: ~/strive-marketing/dist
 
 dependencies:
   override:
