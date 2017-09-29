@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export class Navbar extends React.Component {
+export default class Navbar extends React.Component {
   public render(): JSX.Element {
     return (
       <div className="container pt-3">

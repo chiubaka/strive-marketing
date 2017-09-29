@@ -19,3 +19,28 @@ body {
     font-size: 13px;
   }
 }
+
+.jumbotron-fluid {
+  height: 95vh;
+  background-position: center;
+  background-size: cover;
+  bacground-repeat: no-repeat;
+  background-image: url(../resources/img/start_your_journey.jpg);
+}
+
+.jumbotron-inner {
+  .brand {
+    font-size: 2.5rem;
+    letter-spacing: .475em;
+  }
+
+  .tagline {
+    letter-spacing: .05em;
+  }
+
+  .btn {
+    font-size: 18px;
+    background-color: darkorange;
+    border-color: darkorange;
+  }
+}

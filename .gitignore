@@ -1,3 +1,6 @@
+# Mac filesystem metafiles
+.DS_Store
+
 # Downloaded dependency modules
 node_modules
 
