@@ -16,7 +16,8 @@ test:
   override:
     - yarn build
 
-#deployment:
-#  staging:
-#    branch: master
-#    commands:
+deployment:
+  staging:
+    branch: master
+    commands:
+      - scp circleci@strive.do:/var/www/strive/ dist/*
