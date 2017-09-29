@@ -1,0 +1,16 @@
+machine:
+  hosts:
+    strive.do: 138.68.233.83
+
+dependencies:
+  override:
+    - yarn install
+
+test:
+  override:
+    - yarn build
+
+#deployment:
+#  staging:
+#    branch: master
+#    commands:
