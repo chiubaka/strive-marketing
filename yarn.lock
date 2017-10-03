@@ -5262,6 +5262,10 @@ unique-slug@^2.0.0:
   dependencies:
     imurmurhash "^0.1.4"
 
+universal-ga@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/universal-ga/-/universal-ga-1.1.0.tgz#0d7b0b1bf4a9e095842462052bd4920aaaa8e097"
+
 unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"

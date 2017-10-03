@@ -40,6 +40,7 @@
   "dependencies": {
     "bootstrap": "4.0.0-beta",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "universal-ga": "^1.1.0"
   }
 }
