@@ -1,8 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
+@import "open-iconic/font/css/open-iconic-bootstrap.css";
 
 body {
   margin: 0;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: " Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.6;
@@ -21,7 +22,7 @@ body {
 }
 
 .jumbotron-fluid {
-  height: 95vh;
+  height: 100vh;
   background-position: center;
   background-size: cover;
   bacground-repeat: no-repeat;
@@ -43,4 +44,112 @@ body {
     background-color: darkorange;
     border-color: darkorange;
   }
+}
+
+#home section {
+  padding: 100px 0px;
+
+  h2 {
+    font-size: 1.75rem;
+
+    .brand {
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: bold;
+      letter-spacing: .25em;
+    }
+  }
+
+  h6 {
+    text-transform: uppercase;
+    color: #BEC8CE;
+    letter-spacing: .15em;
+    font-size: .75rem;
+  }
+
+  .headers {
+    max-width: 75%;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .headers {
+      max-width: 50%;
+    }
+  }
+}
+
+#sample-goals {
+  img {
+    height: 450px;
+    width: 450px;
+  }
+
+  #run-a-marathon {
+
+    background-image: url(../resources/img/run_a_marathon.jpg);
+  }
+
+  .sample-goal {
+    @extend .text-light;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}
+
+section#method {
+  padding-bottom: $spacer * 3;
+
+  @include media-breakpoint-down(sm) {
+    padding-left: $spacer * 3;
+    padding-right: $spacer * 3;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 3rem;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    ul {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        max-width: 50%;
+      }
+    }
+  }
+
+  .icon-container {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 0;
+    width: 60px;
+    color: darkorange;
+  }
+
+  .flex-row {
+    flex-wrap: wrap;
+    li {
+      max-width: 50%;
+    }
+  }
+}
+
+.quote {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: darkorange;
 }

@@ -36,9 +36,8 @@ module.exports = {
           {
             loader: "postcss-loader",
             options: {
-              plugins: function() {
+              plugins: function () {
                 return [
-                  require("precss"),
                   require("autoprefixer")
                 ]
               }
@@ -49,32 +48,32 @@ module.exports = {
           }
         ]
       },
-      { test: /\.(woff|woff2)$/, loader: "url-loader?name=fonts/[hash].[ext]&limit=5000&mimetype=application/font-woff" },
-      { test: /\.(eot|svg|ttf)$/, loader: "file-loader?name=fonts/[hash].[ext]" },
-      { test: /\.(jpg|png|svg)$/, loader: "url-loader" } 
-    ],
-  },
-
-  devServer: {
-    proxy: {
-      "/api": {
-        target: "http://localhost:8000",
-        secure: false
+      {
+        test: /\.(woff|woff2)$/,
+        loader: "url-loader",
+        options: {
+          limit: 10000,
+          name: "fonts/[name].[hash].[ext]"
+        }
       },
-      "/**": {
-        target: "/index.html",
-        secure: false,
-        bypass: function(req, res, opt) {
-          if (req.path.indexOf("/img") !== -1 || req.path.indexOf("/public/") !== -1 || req.path.indexOf("/favicon.ico") !== -1) {
-            return "/";
-          }
-
-          if (req.headers.accept.indexOf("html") !== -1) {
-            return "/index.html";
+      {
+        test: /\.(eot|ttf|otf)$/,
+        loader: "file-loader",
+        options: {
+          name: "fonts/[name].[hash].[ext]"
+        }
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 10000,
+            name: "images/[name].[hash].[ext]"
           }
         }
-      }
-    }
+      },
+    ]
   },
 
   plugins: [
