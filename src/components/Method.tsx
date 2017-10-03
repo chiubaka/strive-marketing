@@ -31,7 +31,7 @@ export default class Method extends React.Component {
             <ul>
               <li>
                 <div className="icon-container">
-                  <span className="oi oi-check" title="check" aria-hidden="true"></span>
+                  <span className="oi oi-task" title="task" aria-hidden="true"></span>
                 </div>
                 <p className="font-weight-bold">Execute.</p>
                 <p>Turn your vision into reality with Strive's execution system based on Getting Things Done.</p>
