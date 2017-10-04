@@ -51,19 +51,20 @@ body {
 }
 
 .btn.call-to-action {
-  @extend .text-light;
   @extend .px-5;
   @extend .py-3;
+  color: $white;
   font-size: 18px;
   font-weight: $font-weight-light;
-  background-color: darkorange;
-  border-color: darkorange;
+  background-color: $orange;
+  border-color: $orange;
 }
 
 #home section {
   padding: 100px 0px;
 
   &.quote {
+    color: $white;
     padding: 50px 0px;
 
     .quote-text {
@@ -101,7 +102,6 @@ body {
   }
 
   #run-a-marathon {
-
     background-image: url(../resources/img/run_a_marathon.jpg);
   }
 
@@ -155,7 +155,7 @@ body {
     text-align: center;
     line-height: 0;
     width: 60px;
-    color: darkorange;
+    color: $orange;
   }
 
   .flex-row {
@@ -169,5 +169,5 @@ body {
 .quote {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: darkorange;
+  background-color: $orange;
 }
