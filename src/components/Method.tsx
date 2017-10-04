@@ -1,9 +1,10 @@
 import * as React from "react";
+import CallToAction from "./CallToAction";
 
 export default class Method extends React.Component {
   public render(): JSX.Element {
     return (
-      <section id="method" className="container">
+      <section id="method" className="container list">
         <div className="headers text-center mx-auto mb-5">
           <h6>Method</h6>
           <h2>A research-backed approach to accomplishing any goal.</h2>
@@ -46,6 +47,7 @@ export default class Method extends React.Component {
             </ul>
           </div>
         </div>
+        <CallToAction text="Make your move"/>
       </section>
     );
   }

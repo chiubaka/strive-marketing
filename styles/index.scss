@@ -38,16 +38,39 @@ body {
   .tagline {
     letter-spacing: .05em;
   }
+}
 
-  .btn {
-    font-size: 18px;
-    background-color: darkorange;
-    border-color: darkorange;
+@include media-breakpoint-up(sm) {
+  .container.mx-auto {
+    width: max-content;
   }
+}
+
+.container.call-to-action {
+  width: min-content;
+}
+
+.btn.call-to-action {
+  @extend .text-light;
+  @extend .px-5;
+  @extend .py-3;
+  font-size: 18px;
+  font-weight: $font-weight-light;
+  background-color: darkorange;
+  border-color: darkorange;
 }
 
 #home section {
   padding: 100px 0px;
+
+  &.quote {
+    padding: 50px 0px;
+
+    .quote-text {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
 
   h2 {
     font-size: 1.75rem;
@@ -69,12 +92,6 @@ body {
 
   .headers {
     max-width: 75%;
-  }
-
-  @include media-breakpoint-up(sm) {
-    .headers {
-      max-width: 50%;
-    }
   }
 }
 
@@ -98,12 +115,14 @@ body {
   }
 }
 
-section#method {
-  padding-bottom: $spacer * 3;
-
+#home section.list {
   @include media-breakpoint-down(sm) {
     padding-left: $spacer * 3;
     padding-right: $spacer * 3;
+  }
+
+  .flex-column div {
+    margin-bottom: 2rem;
   }
 
   ul {
@@ -113,7 +132,6 @@ section#method {
     li {
       position: relative;
       padding-left: 80px;
-      margin-bottom: 3rem;
     }
   }
 
@@ -124,6 +142,7 @@ section#method {
 
       li {
         max-width: 50%;
+        flex: 1 1;
       }
     }
   }

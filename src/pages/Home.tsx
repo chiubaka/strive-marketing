@@ -6,6 +6,7 @@ import Features from "../components/Features";
 import Quote from "../components/Quote";
 import SampleGoals from "../components/SampleGoals";
 import Method from "../components/Method";
+import SubscribeForm from "../components/SubscribeForm";
 
 export default class Home extends React.Component {
   public render(): JSX.Element {
@@ -13,21 +14,22 @@ export default class Home extends React.Component {
       <div id="home">
         <Navbar/>
         <Jumbotron/>
+        <Quote
+          text="Make at least one definite move daily toward your goal."
+          author="Bruce Lee"
+        />
         <Method/>
+        <Quote
+          text="Action is the foundational key to all success."
+          author="Pablo Picasso"
+        />
         {/*<SampleGoals/>*/}
-        {/*<Quote*/}
-          {/*text="If you want something you have never had, you must be willing to do something you have never done."*/}
-          {/*author="Thomas Jefferson"*/}
-        {/*/>*/}
-        {/*<Features/>*/}
+        <Features/>
         {/*<Quote*/}
           {/*text="Life isn't about finding yourself. Life is about creating yourself."*/}
           {/*author="George Bernard Shaw"*/}
         {/*/>*/}
-        {/*<Quote*/}
-          {/*text="Action is the foundational key to all success."*/}
-          {/*author="Pablo Picasso"*/}
-        {/*/>*/}
+
         <Footer/>
       </div>
     );

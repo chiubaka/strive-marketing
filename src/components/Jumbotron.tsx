@@ -10,7 +10,7 @@ export default class Jumbotron extends React.Component {
           <div className="jumbotron-inner d-table-cell pl-3 align-middle">
             <h1 className="brand text-uppercase font-italic font-weight-bold">Strive</h1>
             <h2 className="tagline font-weight-light">To be your best.</h2>
-            <button type="button" className="btn text-light px-5 py-3 mt-3">Start your journey</button>
+            <button type="button" className="btn call-to-action px-5 py-3 mt-3">Start your journey</button>
           </div>
         </div>
       </div>
