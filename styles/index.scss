@@ -17,7 +17,15 @@ body {
   letter-spacing: .15em;
 
   .navbar-brand {
+    img {
+      position: relative;
+      top: -7.5px;
+    }
     font-size: 13px;
+  }
+
+  a.nav-link {
+    padding-top: 0;
   }
 }
 
