@@ -4,9 +4,9 @@ import "bootstrap";
 
 import "../styles/index.scss";
 
-import Home from "./pages/Home";
+import Strive from "./Strive";
 
 render(
-  <Home/>,
+  <Strive/>,
   document.getElementById("strive")
 );

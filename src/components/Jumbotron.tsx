@@ -1,16 +1,30 @@
 import * as React from "react";
+import * as classnames from "classnames";
 
-const welcomeImage = require("../../resources/img/start_your_journey.jpg");
+export interface JumbotronProps {
+  backgroundImage: string;
+  className?: string;
+  overlayOpacity?: number;
+}
 
-export default class Jumbotron extends React.Component {
+export default class Jumbotron extends React.Component<JumbotronProps> {
   public render(): JSX.Element {
+    const {backgroundImage, className} = this.props;
+    const overlayOpacity = this.props.overlayOpacity ? this.props.overlayOpacity : 0;
+
     return (
-      <div className="jumbotron-fluid">
+      <div
+        className={classnames("jumbotron-fluid", className)}
+        style={{
+          background: `linear-gradient(rgba(0, 0, 0, ${overlayOpacity}), rgba(0, 0, 0, ${overlayOpacity})), url(${backgroundImage}`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="container h-100 d-table">
-          <div className="jumbotron-inner d-table-cell pl-3 align-middle">
-            <h1 className="brand text-uppercase font-italic font-weight-bold">Strive</h1>
-            <h2 className="tagline font-weight-light">To be your best.</h2>
-            <button type="button" className="btn call-to-action px-5 py-3 mt-3">Start your journey</button>
+          <div className="jumbotron-inner d-table-cell align-middle">
+            {this.props.children}
           </div>
         </div>
       </div>
