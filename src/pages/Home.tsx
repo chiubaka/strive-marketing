@@ -32,7 +32,6 @@ export default class Home extends React.Component {
           author="Pablo Picasso"
         />
         <Features/>
-        <Footer/>
       </div>
     );
   }

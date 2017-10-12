@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import BetaSignup from "./pages/BetaSignup";
+import Footer from "./components/Footer";
 
 export default class Strive extends React.Component {
   public render(): JSX.Element {
@@ -14,6 +15,7 @@ export default class Strive extends React.Component {
             <Route exact path="/" component={Home}/>
             <Route path="/go" component={BetaSignup}/>
           </div>
+          <Footer/>
         </div>
       </BrowserRouter>
     );
