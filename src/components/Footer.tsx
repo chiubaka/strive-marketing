@@ -1,4 +1,5 @@
 import * as React from "react";
+import PrivacyPolicyModal from "./PrivacyPolicyModal";
 
 export default class Footer extends React.Component {
   public render(): JSX.Element {
@@ -9,9 +10,10 @@ export default class Footer extends React.Component {
             &copy; Chiubaka Technologies 2017
           </div>
           <div style={{paddingTop: "5px", flexGrow: 1, textAlign: "right"}}>
-            <a href="//www.iubenda.com/privacy-policy/8239089" className="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a>
+            <a href="#" data-toggle="modal" data-target="#privacy-policy" title="Privacy Policy">Privacy Policy</a>
           </div>
         </div>
+        <PrivacyPolicyModal/>
       </div>
     );
   }
