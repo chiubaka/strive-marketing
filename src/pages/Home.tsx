@@ -1,17 +1,18 @@
 import * as React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Jumbotron from "../components/Jumbotron";
 import Features from "../components/Features";
 import Quote from "../components/Quote";
-import SampleGoals from "../components/SampleGoals";
 import Method from "../components/Method";
-import SubscribeForm from "../components/SubscribeForm";
 import { Link } from "react-router-dom";
 
 const welcomeImage = require("../../resources/img/start_your_journey.jpg");
 
 export default class Home extends React.Component {
+  public componentDidMount(): void {
+    window.fbq("track", "ViewContent", {content_name: "home"});
+    window.gtag("config", "UA-58023025-2", {page_path: "/"});
+  }
+
   public render(): JSX.Element {
     return (
       <div id="home">

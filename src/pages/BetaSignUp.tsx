@@ -4,7 +4,12 @@ import Jumbotron from "../components/Jumbotron";
 
 const constructionImage = require("../../resources/img/under_construction.jpg");
 
-export default class BetaSignup extends React.Component {
+export default class BetaSignUp extends React.Component {
+  public componentDidMount(): void {
+    window.fbq("track", "ViewContent", {content_name: "beta_sign_up"});
+    window.gtag("config", "UA-58023025-2", {page_path: "/go"});
+  }
+
   public render(): JSX.Element {
     return (
       <Jumbotron

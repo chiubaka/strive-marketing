@@ -2,7 +2,7 @@ import * as React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import BetaSignup from "./pages/BetaSignup";
+import BetaSignup from "./pages/BetaSignUp";
 import Footer from "./components/Footer";
 
 export default class Strive extends React.Component {
