@@ -9,7 +9,10 @@ export default class SubscribeForm extends React.Component {
 
   public onSubmit(): void {
     window.fbq("track", "Lead");
-    window.gtag("event", "click", {event_category: "button", event_label: "Beta SignUp"})
+    window.gtag("event", "click", {event_category: "button", event_label: "Beta SignUp"});
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-834157566/5-CHCPKo8XYQ_vfgjQM',
+    });
   }
 
   public render(): JSX.Element {
